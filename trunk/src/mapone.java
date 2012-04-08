@@ -6,6 +6,50 @@ import java.io.Console;
 
 class mapone
 {
+	public void printmenu ()
+	// I.S. sembarang
+	// F.S. dituliskan menu untuk penggunaan program pada layar
+	{
+		System.out.println("+------------------------------------------------------------------------------------------+");
+		System.out.println("+ *** Cara menggunakan kamus ***                                                           +");
+		System.out.println("+                                                                                          +");
+		System.out.println("+ Ketikkan kata yang ingin dicari terjemahannya, lalu tekan enter                          +");
+		System.out.println("+ Program akan otomatis mencari terjemahan kata tersebut, baik dalam bahasa Inggris maupun +");
+		System.out.println("+ dalam bahasa Indonesia                                                                   +");
+		System.out.println("+ Jika kata tidak ditemukan, maka akan muncul tulisan 'null'                               +");
+		System.out.println("+                                                                                          +");
+		System.out.println("+ Selamat menggunakan!                                                                     +");
+		System.out.println("+------------------------------------------------------------------------------------------+");
+	}
+	
+	public boolean isInd(String s) 
+	// mengembalikan true jika string s merupakan sebuah key dari mapind
+	// yang berarti string s adalah sebuah kata dalam bahasa indonesia
+	{
+		if (mapind.get(s)!=null) 
+		{
+			return true ;
+		}
+		else
+		{
+			return false ;
+		}
+	}
+	
+	public boolean isEng(String s) 
+	// mengembalikan true jika string s merupakan sebuah key dari maping
+	// yang berarti string s adalah sebuah kata dalam bahasa inggris
+	{
+		if (maping.get(s)!=null) 
+		{
+			return true ;
+		}
+		else
+		{
+			return false ;
+		}
+	}
+	
 	public static void main(String[] args)
 	{
 		Console console = System.console();
