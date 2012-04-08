@@ -6,7 +6,7 @@ import java.io.Console;
 
 class mapone
 {
-	public void printmenu ()
+	public static void printmenu ()
 	// I.S. sembarang
 	// F.S. dituliskan menu untuk penggunaan program pada layar
 	{
@@ -22,11 +22,11 @@ class mapone
 		System.out.println("+------------------------------------------------------------------------------------------+");
 	}
 	
-	public boolean isInd(String s) 
+	public static boolean isInd(SortedMap m, String s) 
 	// mengembalikan true jika string s merupakan sebuah key dari mapind
 	// yang berarti string s adalah sebuah kata dalam bahasa indonesia
 	{
-		if (mapind.get(s)!=null) 
+		if (m.get(s)!=null) 
 		{
 			return true ;
 		}
@@ -36,11 +36,11 @@ class mapone
 		}
 	}
 	
-	public boolean isEng(String s) 
+	public static boolean isEng(SortedMap m, String s) 
 	// mengembalikan true jika string s merupakan sebuah key dari maping
 	// yang berarti string s adalah sebuah kata dalam bahasa inggris
 	{
-		if (maping.get(s)!=null) 
+		if (m.get(s)!=null) 
 		{
 			return true ;
 		}
@@ -106,11 +106,24 @@ class mapone
 			
 			fin.close();
 			
+			printmenu();
+			
 			while(true)
 			{
 				BufferedReader brin = new BufferedReader(new InputStreamReader(System.in));
 				String s = brin.readLine();
-				System.out.println(mapind.get(s));
+				if (isInd(mapind, s))
+				{
+					System.out.println(mapind.get(s));
+				}
+				else if (isEng(maping, s))
+				{
+					System.out.println(maping.get(s));
+				}
+				else
+				{
+					System.out.println("Kata tidak ada dalam database!");
+				}
 			}
 		}
 		catch (Exception e)
