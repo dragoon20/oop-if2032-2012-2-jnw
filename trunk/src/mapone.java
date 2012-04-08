@@ -16,7 +16,7 @@ class mapone
 		System.out.println("+ Ketikkan kata yang ingin dicari terjemahannya, lalu tekan enter                          +");
 		System.out.println("+ Program akan otomatis mencari terjemahan kata tersebut, baik dalam bahasa Inggris maupun +");
 		System.out.println("+ dalam bahasa Indonesia                                                                   +");
-		System.out.println("+ Jika kata tidak ditemukan, maka akan muncul tulisan 'null'                               +");
+		System.out.println("+ Jika kata tidak ditemukan, maka akan muncul tulisan 'Kata tidak ada dalam database!'     +");
 		System.out.println("+                                                                                          +");
 		System.out.println("+ Selamat menggunakan!                                                                     +");
 		System.out.println("+------------------------------------------------------------------------------------------+");
