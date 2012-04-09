@@ -7,9 +7,29 @@ import java.io.Console;
 class mapone
 {
 	public static void printmenu ()
+	{
+		System.out.println("");
+		System.out.println("+------------------------------------------------------------------------------------------+");
+		System.out.println("+                                                                                          +");
+		System.out.println("+ *** Menu Utama ***                                                                       +");
+		System.out.println("+ 1. Memasukkan entry baru                                                                 +");
+		System.out.println("+ 2. Memutar arah bahasa                                                                   +");
+		System.out.println("+ 3. Menerjemahkan kata                                                                    +");
+		System.out.println("+ 4. Mengenali bahasa masukan                                                              +");
+		System.out.println("+ 5. Menampilkan semua entri, urut abjad                                                   +");
+		System.out.println("+ 6. Menampilkan struktur internal yang dipakai                                            +");
+		System.out.println("+ 7. Quit                                                                                  +");
+		System.out.println("+                                                                                          +");
+		System.out.println("+ Untuk memilih perintah, masukkan angka yang ada di menu                                  +");
+		System.out.println("+ Selamat menggunakan!                                                                     +");
+		System.out.println("+------------------------------------------------------------------------------------------+");
+		System.out.println("");
+	}
+	public static void printmenu1 ()
 	// I.S. sembarang
 	// F.S. dituliskan menu untuk penggunaan program pada layar
 	{
+		System.out.println("");
 		System.out.println("+------------------------------------------------------------------------------------------+");
 		System.out.println("+ *** Cara menggunakan kamus ***                                                           +");
 		System.out.println("+                                                                                          +");
@@ -20,6 +40,7 @@ class mapone
 		System.out.println("+                                                                                          +");
 		System.out.println("+ Selamat menggunakan!                                                                     +");
 		System.out.println("+------------------------------------------------------------------------------------------+");
+		System.out.println("");
 	}
 	
 	public static boolean isInd(SortedMap m, String s) 
@@ -106,24 +127,123 @@ class mapone
 			
 			fin.close();
 			
-			printmenu();
-			
-			while(true)
+			BufferedReader brin = new BufferedReader(new InputStreamReader(System.in));
+			Scanner in = new Scanner(System.in);
+			int a=1;
+			int i=0;
+
+			try
 			{
-				BufferedReader brin = new BufferedReader(new InputStreamReader(System.in));
-				String s = brin.readLine();
-				if (isInd(mapind, s))
+				Process p=Runtime.getRuntime().exec("cmd /c clear");
+				p.waitFor();
+			}
+			catch (IOException e1) {}
+			catch (InterruptedException e2) {}
+			
+			while (i!=7)
+			{
+				printmenu();
+				System.out.print("Pilihan = ");
+				i = in.nextInt();
+				switch (i) 
 				{
-					System.out.println(mapind.get(s));
+					case 1:	{
+								
+								break;
+							}
+							
+					case 2:	{
+								if (a==1)
+								{
+									a=2;
+									System.out.println("Bahasa Indonesia -> Bahasa Inggris");
+								}
+								else if (a==2)
+								{
+									a=1;
+									System.out.println("Bahasa Inggris -> Bahasa Indonesia");
+								}
+								break;
+							}
+							
+					case 3: {
+								printmenu1();
+								System.out.print("Input Kata : ");
+								String s = brin.readLine();
+
+								if ((a==1) && (isInd(mapind, s)))
+								{
+									System.out.println(mapind.get(s));
+								}
+								else if ((a==2) && (isEng(maping, s)))
+								{
+										System.out.println(maping.get(s));
+								}
+								else
+								{
+									System.out.println("Kata tidak ada dalam database!");
+								}
+								break;
+							}
+							
+					case 4:	{
+								System.out.print("Input Kata : ");
+								String s = brin.readLine();
+								System.out.print("Terjemahan Kata : ");
+								if (isInd(mapind, s))
+								{
+									System.out.println("Kata dalam Bahasa Indonesia");
+								}
+								else if (isEng(maping, s))
+								{
+									System.out.println("Kata dalam Bahasa Inggris");
+								}
+								else
+								{
+									System.out.println("Kata tidak ada dalam database");
+								}
+								break;
+							}
+							
+					case 5: {	
+								if (a==1)
+								{
+									Iterator iterator = mapind.keySet().iterator();
+									while (iterator.hasNext()) 
+									{
+										Object key = iterator.next();
+										System.out.println(key + " : " + mapind.get(key));
+									}
+								}
+								else if (a==2)
+								{
+									Iterator iterator = maping.keySet().iterator();
+									while (iterator.hasNext()) 
+									{
+										Object key = iterator.next();
+										System.out.println(key + " : " + maping.get(key));
+									}
+								}
+								
+								break;
+							}
+							
+					case 6:	{
+								System.out.println("Kami menggunakan struktur data Java util Map");
+								break;
+							}
+							
+					case 7: {
+								System.out.println(" *** Terima Kasih sudah menggunakan program ini ***");
+								break;
+							}
+							
+					default:{
+								System.out.println("Perintah masukan salah");
+								break;
+							}
 				}
-				else if (isEng(maping, s))
-				{
-					System.out.println(maping.get(s));
-				}
-				else
-				{
-					System.out.println("Kata tidak ada dalam database!");
-				}
+				
 			}
 		}
 		catch (Exception e)
