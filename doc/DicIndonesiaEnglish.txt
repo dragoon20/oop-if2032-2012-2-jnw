@@ -23,7 +23,7 @@ angin(noun):wind.
 angka(noun):number.
 angsa(noun):swan.
 anjing(noun):dog.
-antara(adj):between.
+antara(other):between.
 antik(adj):antique.
 anting(noun):earrings.
 apel(noun):apple.
@@ -118,7 +118,7 @@ dada(noun):chest.
 dada(noun):breast.
 dadu(noun):dice.
 daging(noun):meat.
-dalam(noun):inside.
+dalam(other):inside.
 damai(noun):peace.
 dampak(noun):effect.
 danau(noun):lake.
@@ -564,7 +564,7 @@ sering(other):often.
 setan(noun):devil.
 siang(noun):noon.
 siap(adj):ready.
-siapa(noun):who.
+siapa(other):who.
 sibuk(adj):busy.
 sihir(noun):magic.
 siku(noun):elbow.
@@ -579,7 +579,7 @@ suara(noun):sound.
 suara(noun):voice.
 suhu(noun):temperature.
 suka(verb):like.
-sumpah(verb):swear.
+sumpah(noun):swear.
 surat(noun):letter.
 surga(noun):heaven.
 suster(noun):nurse.
