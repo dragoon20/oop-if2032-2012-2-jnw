@@ -115,7 +115,7 @@ dada(noun):mune.
 dadu(noun):saikoro.
 daging(noun):niku.
 dalam(other):naka.
-damai(adj):heiwa.
+damai(noun):heiwa.
 dampak(noun):kouka.
 danau(noun):mizuumi.
 dansa(verb):odoru.
