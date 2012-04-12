@@ -33,9 +33,9 @@ public class modelmaponeTest {
     @Test
     public void testCetakmap() {
         System.out.println("cetakmap");
-        int i = 0;
+        String Bahasa = "";
         modelmapone instance = new modelmapone();
-        instance.cetakmap(i);
+        instance.cetakmap(Bahasa);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }
@@ -50,22 +50,6 @@ public class modelmaponeTest {
         modelmapone instance = new modelmapone();
         String[] expResult = null;
         String[] result = instance.detectmap(s);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        //fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of getterjemahan method, of class modelmapone.
-     */
-    @Test
-    public void testGetterjemahan() {
-        System.out.println("getterjemahan");
-        int Bahasa = 0;
-        String s = "";
-        modelmapone instance = new modelmapone();
-        String expResult = "";
-        String result = instance.getterjemahan(Bahasa, s);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
@@ -87,15 +71,16 @@ public class modelmaponeTest {
     }
 
     /**
-     * Test of getmap method, of class modelmapone.
+     * Test of getterjemahan method, of class modelmapone.
      */
     @Test
-    public void testGetmap() {
-        System.out.println("getmap");
-        int i = 0;
+    public void testGetterjemahan() {
+        System.out.println("getterjemahan");
+        String Bahasa = "";
+        String s = "";
         modelmapone instance = new modelmapone();
-        SortedMap expResult = null;
-        SortedMap result = instance.getmap(i);
+        String expResult = "";
+        String result = instance.getterjemahan(Bahasa, s);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
@@ -107,14 +92,29 @@ public class modelmaponeTest {
     @Test
     public void testTambahterjemahan() {
         System.out.println("tambahterjemahan");
-        int Bahasa1 = 0;
-        int Bahasa2 = 0;
+        String Bahasa1 = "";
+        String Bahasa2 = "";
         String s1 = "";
         String s2 = "";
         String s3 = "";
         modelmapone instance = new modelmapone();
         int expResult = -1;
         int result = instance.tambahterjemahan(Bahasa1, Bahasa2, s1, s2, s3);
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        //fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of getmap method, of class modelmapone.
+     */
+    @Test
+    public void testGetmap() {
+        System.out.println("getmap");
+        int i = 0;
+        modelmapone instance = new modelmapone();
+        SortedMap expResult = null;
+        SortedMap result = instance.getmap(i);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");

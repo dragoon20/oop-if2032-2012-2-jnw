@@ -5,19 +5,27 @@
 
 package tubes2.oop;
 
-/**
- *
- * @author Jordan
- */
 
 import java.util.*;
 import java.io.*;
 
+/**
+ * Kelas view dari kamus ver 1
+ * @author Jordan, Adriel, and Wilson
+ */
 public class viewmapone {
+    /**
+     * constructor kelas
+     */
     public viewmapone()
     {
     }
 
+    /**
+     * fungsi untuk menampilkan pilihan menu dan mengembalikan masukan integer yang dipilih user
+     * @param in Scanner
+     * @return menu yang dipilih user
+     */
     public int printmenu (Scanner in)
     {
         if (in!=null)
@@ -56,6 +64,10 @@ public class viewmapone {
         return 7;
     }
 
+    
+    /**
+     * prosedur untuk menge-print petunjuk cara menggunakan kamus
+     */
     public void printpetunjuk ()
     // I.S. sembarang
     // F.S. dituliskan menu untuk penggunaan program pada layar
@@ -74,16 +86,29 @@ public class viewmapone {
             System.out.println("");
     }
 
+    /**
+     * prosedur untuk mencetak string tanpa newline
+     * @param s string yang ingin dicetak
+     */
     public void cetak (String s)
     {
             System.out.print(s);
     }
 
+    /**
+     * prosedur untuk mencetak string dengan newline
+     * @param s string yang ingin dicetak
+     */
     public void cetakln (String s)
     {
             System.out.println(s);
     }
 
+    /**
+     * fungsi untuk membaca masukan sebuah line
+     * @param in BufferedReader untuk input
+     * @return string hasil pembacaan
+     */
     public String getline (BufferedReader in)
     {
         if (in!=null)
