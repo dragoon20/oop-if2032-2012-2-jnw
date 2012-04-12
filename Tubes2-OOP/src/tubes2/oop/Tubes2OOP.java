@@ -1,7 +1,4 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package tubes2.oop;
 
 
@@ -18,6 +15,10 @@ public class Tubes2OOP {
     /**
      * Main program
      * @param args the command line arguments
+	 * @exception IOException
+	 *              mengecek apakah input/output sesuai
+	 * @exception InterruptedException
+	 *              mengecek apakah terjadi interupsi saat pelaksanaan program
      */
     public static void main(String[] args) {
         // TODO code application logic here

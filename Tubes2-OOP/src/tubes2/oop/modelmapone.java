@@ -1,13 +1,5 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-package tubes2.oop;
 
-/**
- *
- * @author Jordan, Adriel, and Wilson
- */
+package tubes2.oop;
 
 import java.util.*;
 import java.io.*;
@@ -25,7 +17,7 @@ public class modelmapone{
     private SortedMap tipe = new TreeMap();
 
     /**
-     * constructor tanpa parameter untuk model ma
+     * constructor tanpa parameter untuk model map
      */
     public modelmapone ()
     {
@@ -56,7 +48,7 @@ public class modelmapone{
 
     /**
      * prosedur untuk mencetak entri kamus dalam map
-     * @param i map bahasa yang dicetak
+     * @param Bahasa map bahasa yang dicetak
      */
     public void cetakmap (String Bahasa)
     {
@@ -112,7 +104,7 @@ public class modelmapone{
      * fungsi untuk memperoleh terjemahan bahasa dari bahasa yg diinginkan
      * @param Bahasa bahasa yang ingin diterjemahkan
      * @param s kata yang ingin diterjemahkan
-     * @return 
+     * @return terjemahan dari bahasa yang diingingkan
      */
     public String getterjemahan (String Bahasa, String s)
     {
@@ -132,7 +124,7 @@ public class modelmapone{
      * @param s1 kata pertama
      * @param s2 kata kedua
      * @param s3 tipe kata
-     * @return 
+     * @return nilai yang menandakan apakah kata berhasil dimasukkan
      */
     public int tambahterjemahan (String Bahasa1, String Bahasa2, String s1, String s2, String s3)
     {
