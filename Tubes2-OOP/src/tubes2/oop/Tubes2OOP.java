@@ -4,17 +4,19 @@
  */
 package tubes2.oop;
 
-/**
- *
- * @author Jordan
- */
 
 import java.util.*;
 import java.io.*;
+import java.lang.reflect.*;
 
+/**
+ * Kelas utama kamus versi 1
+ * @author Jordan, Adriel, and Wilson
+ */
 public class Tubes2OOP {
 
     /**
+     * Main program
      * @param args the command line arguments
      */
     public static void main(String[] args) {
@@ -29,9 +31,9 @@ public class Tubes2OOP {
         BufferedReader brin = new BufferedReader(new InputStreamReader(System.in));
         Scanner in = new Scanner(System.in);
 
-        int bahasadef=0;
-        int bahasadua=1;
-        int i=7;
+        String bahasadef="Indonesia";
+        String bahasadua="Inggris";
+        int i=0;
         while (i!=7)
         {
                 i = view.printmenu(in);
@@ -52,18 +54,10 @@ public class Tubes2OOP {
                                     break;
                                 }
                         case 2:	{
-                                    if (bahasadef==0)
-                                    {
-                                            bahasadef = 1;
-                                            bahasadua = 0;
-                                            view.cetakln("Bahasa Indonesia -> Bahasa Inggris");
-                                    }
-                                    else if (bahasadef==1)
-                                    {
-                                            bahasadef = 0;
-                                            bahasadua = 1;
-                                            view.cetakln("Bahasa Inggris -> Bahasa Indonesia");
-                                    }
+                                    String temp = bahasadef;
+                                    bahasadef = bahasadua;
+                                    bahasadua = temp;
+                                    view.cetakln("Bahasa " + bahasadua + " -> Bahasa " + bahasadef);
                                     break;
                                 }			
                         case 3: {
@@ -111,12 +105,32 @@ public class Tubes2OOP {
                                     }
                                     break;
                                 }
-                        case 5: {	
+                        case 5: {
                                     model.cetakmap(bahasadef);
                                     break;
                                 }
                         case 6:	{
-                                    view.cetakln("Kami menggunakan struktur data Java util Map");
+                                    try
+                                    {
+                                        Class c = TreeMap.class;
+                                        Method m[] = c.getDeclaredMethods();
+                                        Field f[] = c.getDeclaredFields();
+                                        view.cetakln("Struktur TreeMap");
+                                        view.cetakln("Attribut:");
+                                        for (int j=0;j<f.length;j++)
+                                        {
+                                            view.cetakln(f[j].toString());
+                                        }
+                                        view.cetakln("Method");
+                                        for (int j=0;j<m.length;j++)
+                                        {
+                                            view.cetakln(m[j].toString());
+                                        }
+                                    }
+                                    catch (Throwable e)
+                                    {
+                                        System.err.println(e);
+                                    }
                                     break;
                                 }
                         case 7: {

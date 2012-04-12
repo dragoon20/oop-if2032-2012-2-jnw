@@ -6,61 +6,79 @@ package tubes2.oop;
 
 /**
  *
- * @author Jordan
+ * @author Jordan, Adriel, and Wilson
  */
 
 import java.util.*;
 import java.io.*;
 
+/**
+ * Kelas model dari kamus ver 1
+ * @author Jordan, Adriel, and Wilson
+ */
 public class modelmapone{
-    private SortedMap map[];
+    
+    private SortedMap<String,String> map[];
     private int jumlah;
-    private SortedMap bahasa = new TreeMap();
+    private SortedMap<String,Integer> bahasa = new TreeMap();
     private String [] namabahasa;
     private SortedMap tipe = new TreeMap();
 
+    /**
+     * constructor tanpa parameter untuk model ma
+     */
     public modelmapone ()
     {
            jumlah = 0;
     }
     
+    /**
+     * constructor dengan parameter untuk model map
+     * @param Jumlah Jumlah bahasa yang ada
+     * @param Bahasa Nama-nama bahasa
+     */
     public modelmapone (int Jumlah, String [] Bahasa) 
     {
             jumlah=Jumlah;
             map = new SortedMap[jumlah];
+            namabahasa = new String[Bahasa.length];
             for (int i=0;i<jumlah;++i)
             {
                     map[i] = new TreeMap();
             }
-            int i = 0;
-            for (String s : Bahasa)
+            for (int i=0;i<Bahasa.length;++i)
             {
-                    bahasa.put(s,i);
-                    i++;
-            }
-            namabahasa = new String[i];
-            i = 0;
-            for (String s : Bahasa)
-            {
-                    namabahasa[i]=s;
-                    i++;
+                    bahasa.put(Bahasa[i],i);
+                    namabahasa[i]=Bahasa[i];
+
             }
     }
 
-    public void cetakmap (int i)
+    /**
+     * prosedur untuk mencetak entri kamus dalam map
+     * @param i map bahasa yang dicetak
+     */
+    public void cetakmap (String Bahasa)
     {
-        if (i<jumlah)
+        
+        if (bahasa.get(Bahasa)!=null)
         {
+            int pos = bahasa.get(Bahasa);
             viewmapone view = new viewmapone();
-            Iterator iterator = map[i].keySet().iterator();
+            Iterator iterator = map[pos].keySet().iterator();
             while (iterator.hasNext()) 
             {
-                    Object key = iterator.next();
-                    view.cetakln(key + " : " + map[i].get(key) + " (" + tipe.get(key) + ")");
+                    String key = (String)iterator.next();
+                    view.cetakln(key + " : " + map[pos].get(key) + " (" + tipe.get(key) + ")");
             }
         }
     }
 
+    /**
+     * fungsi untuk mendeteksi ada bahasa apa saja dalam map
+     * @param s Kata yang ingin dideteksi
+     * @return Bahasa-bahasa yang memiliki kata tersebut
+     */
     public String [] detectmap (String s)
     {
             String [] value = new String[jumlah];
@@ -78,14 +96,11 @@ public class modelmapone{
             return null;
     }
 
-    public String getterjemahan (int Bahasa, String s)
-    {
-        if (Bahasa<jumlah)
-            if (map[Bahasa].get(s)!=null)
-                    return (String) map[Bahasa].get(s);
-            return "";
-    }
-
+    /**
+     * getter value untuk map tipe
+     * @param s kata yang ingin diketahui tipenya
+     * @return tipe dari s
+     */
     public String gettipe (String s)
     {
             if ((String) tipe.get(s)!=null)
@@ -93,27 +108,49 @@ public class modelmapone{
             return "";
     }
 
-    public SortedMap getmap (int i)
+        /**
+     * fungsi untuk memperoleh terjemahan bahasa dari bahasa yg diinginkan
+     * @param Bahasa bahasa yang ingin diterjemahkan
+     * @param s kata yang ingin diterjemahkan
+     * @return 
+     */
+    public String getterjemahan (String Bahasa, String s)
     {
-            if (i<jumlah)
-                return map[i];
-            return null;
-    }
-
-    public int tambahterjemahan (int Bahasa1, int Bahasa2, String s1, String s2, String s3)
-    {
-        if ((Bahasa1<jumlah)&&(Bahasa2<jumlah))
+        if (bahasa.get(Bahasa)!=null)
         {
+            int posisi = bahasa.get(Bahasa);
+            if (map[posisi].get(s)!=null)
+                    return (String) map[posisi].get(s);
+        }
+        return "";
+    }
+    
+    /**
+     * fungsi untuk mengisi entri kata dan terjemahan baru, mengembalikan 0 jika kata belum ada, mengembalikan -1 jika entri kata sudah ada
+     * @param Bahasa1 bahasa pertama
+     * @param Bahasa2 bahasa kedua
+     * @param s1 kata pertama
+     * @param s2 kata kedua
+     * @param s3 tipe kata
+     * @return 
+     */
+    public int tambahterjemahan (String Bahasa1, String Bahasa2, String s1, String s2, String s3)
+    {
+        if ((bahasa.get(Bahasa1)!=null)&&(bahasa.get(Bahasa2)!=null))
+        {
+            int posisi1 = bahasa.get(Bahasa1);
+            int posisi2 = bahasa.get(Bahasa2);
+
             boolean cek = false;
-            if (map[Bahasa1].get(s1)==null)
+            if (map[posisi1].get(s1)==null)
             {
-                    map[Bahasa1].put(s1,s2);
+                    map[posisi1].put(s1,s2);
                     tipe.put(s1,s3);
                     cek = true;
             }
-            if (map[Bahasa2].get(s2)==null)
+            if (map[posisi2].get(s2)==null)
             {
-                    map[Bahasa2].put(s2,s1);
+                    map[posisi2].put(s2,s1);
                     tipe.put(s2,s3);
                     cek = true;
             }
@@ -123,6 +160,23 @@ public class modelmapone{
         return -1;
     }
 
+    /**
+     * getter untuk entri ke-i pada map Use modelmapone(int,String[]) to move a piece.
+     * @param i id map yang diinginkan
+     * @return map yang diinginkan
+     */
+    public SortedMap getmap (int i)
+    {
+            if (i<jumlah)
+                return map[i];
+            return null;
+    }
+
+    /**
+     * setter untuk map m pada indeks i
+     * @param m map yang ingin diset
+     * @param i id map yang ingin diset
+     */
     public void setmap (SortedMap m, int i)
     {
         if (m!=null)
@@ -130,19 +184,25 @@ public class modelmapone{
             Iterator iterator = m.keySet().iterator();
             while (iterator.hasNext()) 
             {
-                    Object key = iterator.next();
+                    String key = (String)iterator.next();
                     if (map[i].get(key)==null)
-                            map[i].put(key,m.get(key));
+                            map[i].put(key,(String)m.get(key));
             }
         }
     }
 
+    /**
+     * prosedur untuk membaca file dari luar
+     * @param bahasa1 bahasa pertama
+     * @param bahasa2 bahasa kedua
+     * @param namafile nama file.txt yang mengandung kamus dari bahasa1 ke bahasa2
+     */
     public void readinput (String bahasa1, String bahasa2, String namafile)
     {
             try
             {
-                    int bhs1 = (Integer)bahasa.get(bahasa1);
-                    int bhs2 = (Integer)bahasa.get(bahasa2);
+                    int bhs1 = bahasa.get(bahasa1);
+                    int bhs2 = bahasa.get(bahasa2);
 
                     FileInputStream fstream = new FileInputStream(namafile);
                     DataInputStream fin = new DataInputStream(fstream);
@@ -198,11 +258,16 @@ public class modelmapone{
             }
     }
 
+    /**
+     * prosedur untuk menuliskan isi map sekarang ke file luar
+     * @param Bahasa bahasa yang ingin ditulis
+     * @param namafile nama file
+     */
     public void writeoutput (String Bahasa, String namafile)
     {
             try
             {
-                    int bhs = (Integer)bahasa.get(Bahasa);
+                    int bhs = bahasa.get(Bahasa);
                     // Create file 
                     FileWriter fstream = new FileWriter(namafile);
                     BufferedWriter out = new BufferedWriter(fstream);
@@ -210,7 +275,7 @@ public class modelmapone{
                     Iterator iterator = map[bhs].keySet().iterator();
                     while (iterator.hasNext()) 
                     {
-                            Object key = iterator.next();
+                            String key = (String)iterator.next();
                             out.write(key + "(" + tipe.get(key) + "):" + map[bhs].get(key) + ".\n");
                     }
 

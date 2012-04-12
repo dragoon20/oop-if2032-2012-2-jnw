@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="Secundes" name="tubes2.oop.modelmaponeTest" tests="9" time="0.081" timestamp="2012-04-12T01:46:11">
+<testsuite errors="0" failures="0" hostname="Secundes" name="tubes2.oop.modelmaponeTest" tests="9" time="0.076" timestamp="2012-04-12T05:04:14">
   <properties>
     <property name="libs.jsp-compiler.javadoc" value="" />
     <property name="netbeans.autoupdate.country" value="US" />
@@ -69,7 +69,7 @@
     <property name="manifest.available+main.class" value="true" />
     <property name="libs.spring-webmvc3.0.maven-pom" value="" />
     <property name="libs.swing-layout.maven-pom" value="" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner tubes2.oop.modelmaponeTest filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Jordan\Documents\NetBeansProjects\Tubes2-OOP\build\test\results\TEST-tubes2.oop.modelmaponeTest.xml crashfile=C:\Users\Jordan\Documents\NetBeansProjects\Tubes2-OOP\build\junitvmwatcher3326186749749834580.properties propsfile=C:\Users\Jordan\Documents\NetBeansProjects\Tubes2-OOP\build\junit2200470866789945255.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner tubes2.oop.modelmaponeTest filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,C:\Users\Jordan\Documents\NetBeansProjects\Tubes2-OOP\build\test\results\TEST-tubes2.oop.modelmaponeTest.xml crashfile=C:\Users\Jordan\Documents\NetBeansProjects\Tubes2-OOP\build\junitvmwatcher1424582764058920413.properties propsfile=C:\Users\Jordan\Documents\NetBeansProjects\Tubes2-OOP\build\junit7020755036568564714.properties" />
     <property name="build.classes.dir" value="build/classes" />
     <property name="netbeans.accept_license_class" value="org.netbeans.license.AcceptLicense" />
     <property name="build.sysclasspath" value="ignore" />
@@ -439,24 +439,24 @@
     <property name="platform.active" value="default_platform" />
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
   </properties>
-  <testcase classname="tubes2.oop.modelmaponeTest" name="testDetectmap" time="0.005" />
-  <testcase classname="tubes2.oop.modelmaponeTest" name="testGetterjemahan" time="0.0" />
-  <testcase classname="tubes2.oop.modelmaponeTest" name="testTambahterjemahan" time="0.0" />
-  <testcase classname="tubes2.oop.modelmaponeTest" name="testReadinput" time="0.001" />
-  <testcase classname="tubes2.oop.modelmaponeTest" name="testWriteoutput" time="0.0" />
-  <testcase classname="tubes2.oop.modelmaponeTest" name="testGettipe" time="0.0" />
-  <testcase classname="tubes2.oop.modelmaponeTest" name="testGetmap" time="0.0" />
+  <testcase classname="tubes2.oop.modelmaponeTest" name="testGettipe" time="0.003" />
   <testcase classname="tubes2.oop.modelmaponeTest" name="testSetmap" time="0.0" />
+  <testcase classname="tubes2.oop.modelmaponeTest" name="testGetmap" time="0.001" />
   <testcase classname="tubes2.oop.modelmaponeTest" name="testCetakmap" time="0.0" />
-  <system-out><![CDATA[detectmap
+  <testcase classname="tubes2.oop.modelmaponeTest" name="testDetectmap" time="0.001" />
+  <testcase classname="tubes2.oop.modelmaponeTest" name="testGetterjemahan" time="0.0" />
+  <testcase classname="tubes2.oop.modelmaponeTest" name="testTambahterjemahan" time="0.001" />
+  <testcase classname="tubes2.oop.modelmaponeTest" name="testReadinput" time="0.0" />
+  <testcase classname="tubes2.oop.modelmaponeTest" name="testWriteoutput" time="0.0" />
+  <system-out><![CDATA[gettipe
+setmap
+getmap
+cetakmap
+detectmap
 getterjemahan
 tambahterjemahan
 readinput
 writeoutput
-gettipe
-getmap
-setmap
-cetakmap
 ]]></system-out>
   <system-err><![CDATA[Error: null
 Error: null
