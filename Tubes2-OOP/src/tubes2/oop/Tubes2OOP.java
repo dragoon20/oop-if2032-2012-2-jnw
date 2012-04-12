@@ -33,8 +33,8 @@ public class Tubes2OOP {
 
         String bahasadef="Indonesia";
         String bahasadua="Inggris";
-        int i=0;
-        while (i!=7)
+        int i=7;
+        do
         {
                 i = view.printmenu(in);
                 switch (i)
@@ -142,7 +142,7 @@ public class Tubes2OOP {
                                     break;
                                 }
                 }
-        }
+        }while (i!=7);
         model.writeoutput(bahasa[0],"DicIndonesiaEnglish.txt");
         in.close();
     }

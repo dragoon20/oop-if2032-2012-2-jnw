@@ -30,7 +30,7 @@ public class viewmapone {
     {
         if (in!=null)
         {
-            int i = 0;
+            int i = 7;
             try
             {
                     System.out.println("");
