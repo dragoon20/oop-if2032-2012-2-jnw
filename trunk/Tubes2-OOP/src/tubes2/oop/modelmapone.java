@@ -230,7 +230,7 @@ public class modelmapone{
                     String s2="";
                     String s3="";
                     Vector<String[]> tempV = new Vector<String[]>();
-                    String[] stemp = null;
+                    String[] stemp = new String[2];
                     boolean cek = false;
                     boolean cekspecial = false;
                     int tempint;
@@ -248,18 +248,21 @@ public class modelmapone{
                             else if (temp.compareTo(".")==0)
                             {
                                     cek = false;
-//                                    if (map[bhs1].get(s1)==null)
-//                                    {
+                                    if (map[bhs1].get(s1)!=null)
+                                    {
                                         tempV = map[bhs1].get(s1);
+                                    }
                                         stemp[0] = s2;
                                         stemp[1] = s3;
                                         tempV.add(stemp);
                                         map[bhs1].put(s1,tempV);
                                         tipe.put(s1,s3);
 //                                    }
-//                                    if (map[bhs2].get(s2)==null)
-//                                    {
+                                    tempV = new Vector<String[]>();
+                                    if (map[bhs2].get(s2)!=null)
+                                    {
                                         tempV = map[bhs2].get(s2);
+                                    }
                                         stemp[0] = s1;
                                         tempV.add(stemp);
                                         map[bhs2].put(s2,tempV);
