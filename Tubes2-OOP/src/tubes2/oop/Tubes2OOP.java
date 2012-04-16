@@ -43,15 +43,40 @@ public class Tubes2OOP {
                         case 1:	{
                                     view.cetak("Input Kata : ");
                                     String s1 = view.getline(brin);
-                                    view.cetak("Terjemahan Kata : ");
-                                    String s2 = view.getline(brin);
-                                    view.cetak("Tipe Kata : ");
-                                    String s3 = view.getline(brin);
-                                    int j = model.tambahterjemahan(bahasadef,bahasadua,s1,s2,s3);
-                                    if (j==0)
-                                            view.cetakln("Entry baru berhasil disimpan.");
+									view.cetak("Terjemahan Kata : ");
+									String s2 = view.getline(brin);
+									view.cetak("Tipe Kata : ");
+									String s3 = view.getline(brin);
+									String [] hasil = model.detectmap(s1);
+                                    int a = 0;
+                                    for (String temp : hasil)
+                                    {
+                                            a++;
+                                    }
+                                    a--;
+                                    if (a!=0)
+                                    {
+                                            if (s2.compareTo(model.getterjemahan(bahasadua,s1).get(0)[0])==0)
+											{
+												view.cetak("Kata sudah ada dalam database");
+											}
+											else
+											{
+												int j = model.tambahterjemahan(bahasadef,bahasadua,s1,s2,s3);
+												if (j==0)
+												view.cetakln("Entry baru berhasil disimpan.");
+												else
+												view.cetakln("Entry baru gagal disimpan.");     
+											}
+									}
                                     else
-                                            view.cetakln("Entry baru gagal disimpan.");
+                                    {
+										int j = model.tambahterjemahan(bahasadef,bahasadua,s1,s2,s3);
+										if (j==0)
+												view.cetakln("Entry baru berhasil disimpan.");
+										else
+												view.cetakln("Entry baru gagal disimpan.");       
+                                    }
                                     break;
                                 }
                         case 2:	{
@@ -65,8 +90,8 @@ public class Tubes2OOP {
                                     view.printpetunjuk();
                                     view.cetak("Input Kata : ");
                                     String s = view.getline(brin);
-                                    String hasil = model.getterjemahan(bahasadef,s);
-                                    String tipe = model.gettipe(s);
+                                    String hasil = model.getterjemahan(bahasadef,s).get(0)[0];
+                                    String tipe = model.getterjemahan(bahasadef,s).get(0)[1];
                                     if (hasil.compareTo("")!=0)
                                     {
                                             view.cetak("Terjemahan Kata : ");

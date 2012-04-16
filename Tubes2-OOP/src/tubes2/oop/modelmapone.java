@@ -3,6 +3,7 @@ package tubes2.oop;
 
 import java.util.*;
 import java.io.*;
+import java.util.Vector;
 
 /**
  * Kelas model dari kamus ver 1
@@ -10,11 +11,11 @@ import java.io.*;
  */
 public class modelmapone{
     
-    private SortedMap<String,String> map[];
+    private SortedMap<String,Vector<String[]>> map[];
     private int jumlah;
-    private SortedMap<String,Integer> bahasa = new TreeMap();
+    private Map<String,Integer> bahasa = new HashMap();
     private String [] namabahasa;
-    private SortedMap tipe = new TreeMap();
+    private Map tipe = new HashMap(); // noun, verb, adj, other
 
     /**
      * constructor tanpa parameter untuk model map
@@ -61,11 +62,20 @@ public class modelmapone{
             while (iterator.hasNext()) 
             {
                     String key = (String)iterator.next();
-                    view.cetakln(key + " : " + map[pos].get(key) + " (" + tipe.get(key) + ")");
+                    view.cetakln(key + " : " + cetakvektor(map[pos].get(key)) + " (" + tipe.get(key) + ")");
             }
         }
     }
-
+    
+    public String cetakvektor (Vector<String[]> v) {
+        String temp = v.get(0)[0] + v.get(0)[1];
+        int i = 1;
+        while (v.get(i)!=null) {
+            temp = temp + "," + v.get(i)[0] + v.get(i)[1];
+        }
+        return temp;
+    }
+    
     /**
      * fungsi untuk mendeteksi ada bahasa apa saja dalam map
      * @param s Kata yang ingin dideteksi
@@ -106,15 +116,22 @@ public class modelmapone{
      * @param s kata yang ingin diterjemahkan
      * @return terjemahan dari bahasa yang diingingkan
      */
-    public String getterjemahan (String Bahasa, String s)
+    public Vector<String[]> getterjemahan (String Bahasa, String s)
     {
         if (bahasa.get(Bahasa)!=null)
         {
             int posisi = bahasa.get(Bahasa);
-            if (map[posisi].get(s)!=null)
-                    return (String) map[posisi].get(s);
+            if (map[posisi].get(s)!=null){
+                    
+                    return map[posisi].get(s);
+            }
         }
-        return "";
+        Vector<String[]> Vreturn = new Vector<String[]>();
+        String[] stemp = null;
+//        stemp[0] = ""; 
+//        stemp[1] = ""; 
+        Vreturn.add(stemp);
+        return Vreturn;
     }
     
     /**
@@ -134,18 +151,27 @@ public class modelmapone{
             int posisi2 = bahasa.get(Bahasa2);
 
             boolean cek = false;
-            if (map[posisi1].get(s1)==null)
-            {
-                    map[posisi1].put(s1,s2);
-                    tipe.put(s1,s3);
-                    cek = true;
-            }
-            if (map[posisi2].get(s2)==null)
-            {
-                    map[posisi2].put(s2,s1);
-                    tipe.put(s2,s3);
-                    cek = true;
-            }
+//            if (map[posisi1].get(s1)==null)
+//            {
+                Vector<String[]> tempV = new Vector<String[]>();
+                tempV = map[posisi1].get(s1);
+                String[] stemp = null;
+                stemp[0] = s2;
+                stemp[1] = s3;
+                tempV.add(stemp);
+                map[posisi1].put(s1,tempV);
+                tipe.put(s1,s3);
+//                cek = true;
+//            }
+//            if (map[posisi2].get(s2)==null)
+//            {
+                tempV = map[posisi1].get(s2);
+                stemp[0] = s1;
+                tempV.add(stemp);
+                map[posisi2].put(s2,tempV);
+                tipe.put(s2,s3);
+                cek = true;
+ //           }
             if (cek)
                     return 0;
         }
@@ -169,7 +195,7 @@ public class modelmapone{
      * @param m map yang ingin diset
      * @param i id map yang ingin diset
      */
-    public void setmap (SortedMap m, int i)
+    public void setmap (SortedMap<String,Vector<String[]>> m, int i)
     {
         if (m!=null)
         {
@@ -178,7 +204,7 @@ public class modelmapone{
             {
                     String key = (String)iterator.next();
                     if (map[i].get(key)==null)
-                            map[i].put(key,(String)m.get(key));
+                            map[i].put(key,m.get(key));
             }
         }
     }
@@ -203,6 +229,8 @@ public class modelmapone{
                     String s1="";
                     String s2="";
                     String s3="";
+                    Vector<String[]> tempV = new Vector<String[]>();
+                    String[] stemp = null;
                     boolean cek = false;
                     boolean cekspecial = false;
                     int tempint;
@@ -220,16 +248,23 @@ public class modelmapone{
                             else if (temp.compareTo(".")==0)
                             {
                                     cek = false;
-                                    if (map[bhs1].get(s1)==null)
-                                    {
-                                            map[bhs1].put(s1,s2);
-                                            tipe.put(s1,s3);
-                                    }
-                                    if (map[bhs2].get(s2)==null)
-                                    {
-                                            map[bhs2].put(s2,s1);
-                                            tipe.put(s2,s3);
-                                    }
+//                                    if (map[bhs1].get(s1)==null)
+//                                    {
+                                        tempV = map[bhs1].get(s1);
+                                        stemp[0] = s2;
+                                        stemp[1] = s3;
+                                        tempV.add(stemp);
+                                        map[bhs1].put(s1,tempV);
+                                        tipe.put(s1,s3);
+//                                    }
+//                                    if (map[bhs2].get(s2)==null)
+//                                    {
+                                        tempV = map[bhs2].get(s2);
+                                        stemp[0] = s1;
+                                        tempV.add(stemp);
+                                        map[bhs2].put(s2,tempV);
+                                        tipe.put(s2,s3);
+//                                    }
                             }
                             else if (cek)
                                     s2 = s2+temp;
@@ -268,7 +303,7 @@ public class modelmapone{
                     while (iterator.hasNext()) 
                     {
                             String key = (String)iterator.next();
-                            out.write(key + "(" + tipe.get(key) + "):" + map[bhs].get(key) + ".\n");
+                            out.write(key + "(" + tipe.get(key) + "):" + cetakvektor(map[bhs].get(key)) + ".\n");
                     }
 
                     //Close the output stream
