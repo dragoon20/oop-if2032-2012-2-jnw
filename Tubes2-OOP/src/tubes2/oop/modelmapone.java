@@ -1,5 +1,5 @@
 
-package tubes2.oop;
+package tubes2.OOP;
 
 import java.util.*;
 import java.io.*;
@@ -127,16 +127,18 @@ public class modelmapone{
      * @param s kata yang ingin diterjemahkan
      * @return terjemahan dari bahasa yang diingingkan
      */
-    public String getterjemahan (String Bahasa, String s)
+    public String[] getterjemahan (String Bahasa, String s)
     {
         if (bahasa.get(Bahasa)!=null)
         {
             int posisi = bahasa.get(Bahasa);
             if (map[posisi].get(s)!=null){
-				return map[posisi].get(s);
+				String[] tempS;
+				tempS = map[posisi].get(s).split(" ");
+				return tempS;
             }
         }
-        String Sreturn = "";
+        String [] Sreturn = null;
         return Sreturn;
     }
     
@@ -294,7 +296,7 @@ public class modelmapone{
             }
             catch (Exception e)
             {
-                    System.err.println("Error readinput: "+e.getMessage());
+                    System.err.println("Error : "+e.getMessage());
             }
     }
 
@@ -347,7 +349,7 @@ public class modelmapone{
             }
             catch (Exception e)
             {	//Catch exception if any
-                    System.err.println("Error writeoutput: " + e.getMessage());
+                    System.err.println("Error : " + e.getMessage());
             }
     }
 }
