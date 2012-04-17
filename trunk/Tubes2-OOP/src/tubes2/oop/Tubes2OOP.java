@@ -1,5 +1,5 @@
 
-package tubes2.oop;
+package tubes2.OOP;
 
 
 import java.util.*;
@@ -47,35 +47,48 @@ public class Tubes2OOP {
 									String s2 = view.getline(brin);
 									view.cetak("Tipe Kata : ");
 									String s3 = view.getline(brin);
-									String [] hasil = model.detectmap(s1);
-                                    int a = 0;
-                                    for (String temp : hasil)
+									if (model.getterjemahan(bahasadef,s1)==null)
                                     {
-                                            a++;
-                                    }
-                                    a--;
-                                    if (a!=0)
-                                    {
-                                            if (s2.compareTo(model.getterjemahan(bahasadua,s1))==0)
-											{
-												view.cetak("Kata sudah ada dalam database");
-											}
-											else
-											{
-												int j = model.tambahterjemahan(bahasadef,bahasadua,s1,s2,s3);
-												if (j==0)
-												view.cetakln("Entry baru berhasil disimpan.");
-												else
-												view.cetakln("Entry baru gagal disimpan.");     
-											}
+                                        if (model.tambahterjemahan(bahasadef,bahasadua,s1,s2,s3)==0)
+											view.cetakln("Entry baru berhasil disimpan.");
+										else
+											view.cetakln("Entry baru gagal disimpan.");
 									}
                                     else
                                     {
-										int j = model.tambahterjemahan(bahasadef,bahasadua,s1,s2,s3);
-										if (j==0)
-												view.cetakln("Entry baru berhasil disimpan.");
+										String [] terjemahan = model.getterjemahan(bahasadef,s1);
+										int jumlah = terjemahan.length;
+										if (jumlah>0)
+										{
+											boolean cek = true;
+											int j = 0;
+											while ((cek)&&(j<jumlah))
+											{
+												if (s2.equals(terjemahan[j]))
+												{
+													cek = false;
+												}
+												j+=2;
+											}
+											if (cek)
+											{
+												if (model.tambahterjemahan(bahasadef,bahasadua,s1,s2,s3)==0)
+													view.cetakln("Entry baru berhasil disimpan.");	
+												else
+													view.cetakln("Entry baru gagal disimpan.");
+											}
+											else
+											{
+												view.cetakln("Entry sudah ada.");
+											}
+										}
 										else
-												view.cetakln("Entry baru gagal disimpan.");       
+										{
+											if (model.tambahterjemahan(bahasadef,bahasadua,s1,s2,s3)==0)
+												view.cetakln("Entry baru berhasil disimpan.");	
+											else
+												view.cetakln("Entry baru gagal disimpan."); 
+										}
                                     }
                                     break;
                                 }
@@ -90,14 +103,18 @@ public class Tubes2OOP {
                                     view.printpetunjuk();
                                     view.cetak("Input Kata : ");
                                     String s = view.getline(brin);
-                                    String hasil = model.getterjemahan(bahasadef,s);
-                                    String tipe = model.gettipe(s);
-                                    if (hasil.compareTo("")!=0)
+                                    String [] hasil = model.getterjemahan(bahasadef,s);
+                                    if (hasil.length != 0)
                                     {
                                             view.cetak("Terjemahan Kata : ");
-                                            view.cetakln(hasil);
-                                            view.cetak("Tipe Kata : ");
-                                            view.cetakln(tipe);
+                                            int n=0;
+											while(n<hasil.length)
+											{
+												view.cetak(hasil[n]);
+												n++;
+												view.cetak(" ("+hasil[n]+")\n");
+												n++;
+											}
                                     }
                                     else
                                     {
@@ -169,7 +186,7 @@ public class Tubes2OOP {
                                 }
                 }
         }while (i!=7);
-        model.writeoutput(bahasa[0],"DicIndonesiaEnglis.txt");
+        model.writeoutput(bahasa[0],"DicIndonesiaEnglish.txt");
         in.close();
     }
 }
