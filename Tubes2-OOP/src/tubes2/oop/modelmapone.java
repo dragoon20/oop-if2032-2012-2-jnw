@@ -11,7 +11,7 @@ import java.util.Vector;
  */
 public class modelmapone{
     
-    private SortedMap<String,Vector<String[]>> map[];
+    private SortedMap<String,Vector<twostringarray>> map[];
     private int jumlah;
     private Map<String,Integer> bahasa = new HashMap();
     private String [] namabahasa;
@@ -67,11 +67,11 @@ public class modelmapone{
         }
     }
     
-    public String cetakvektor (Vector<String[]> v) {
-        String temp = v.get(0)[0] + v.get(0)[1];
+    public String cetakvektor (Vector<twostringarray> v) {
+        String temp = v.get(0).getarti() + v.get(0).gettype();
         int i = 1;
         while (v.get(i)!=null) {
-            temp = temp + "," + v.get(i)[0] + v.get(i)[1];
+            temp = temp + "," + v.get(i).getarti() + v.get(i).gettype();
         }
         return temp;
     }
@@ -116,7 +116,7 @@ public class modelmapone{
      * @param s kata yang ingin diterjemahkan
      * @return terjemahan dari bahasa yang diingingkan
      */
-    public Vector<String[]> getterjemahan (String Bahasa, String s)
+    public Vector<twostringarray> getterjemahan (String Bahasa, String s)
     {
         if (bahasa.get(Bahasa)!=null)
         {
@@ -126,11 +126,7 @@ public class modelmapone{
                     return map[posisi].get(s);
             }
         }
-        Vector<String[]> Vreturn = new Vector<String[]>();
-        String[] stemp = null;
-//        stemp[0] = ""; 
-//        stemp[1] = ""; 
-        Vreturn.add(stemp);
+        Vector<twostringarray> Vreturn = new Vector<twostringarray>();
         return Vreturn;
     }
     
@@ -153,11 +149,9 @@ public class modelmapone{
             boolean cek = false;
 //            if (map[posisi1].get(s1)==null)
 //            {
-                Vector<String[]> tempV = new Vector<String[]>();
+                Vector<twostringarray> tempV = new Vector<twostringarray>();
                 tempV = map[posisi1].get(s1);
-                String[] stemp = null;
-                stemp[0] = s2;
-                stemp[1] = s3;
+                twostringarray stemp = new twostringarray(s2,s3);
                 tempV.add(stemp);
                 map[posisi1].put(s1,tempV);
                 tipe.put(s1,s3);
@@ -166,7 +160,7 @@ public class modelmapone{
 //            if (map[posisi2].get(s2)==null)
 //            {
                 tempV = map[posisi1].get(s2);
-                stemp[0] = s1;
+                stemp.setarti(s1);
                 tempV.add(stemp);
                 map[posisi2].put(s2,tempV);
                 tipe.put(s2,s3);
@@ -195,7 +189,7 @@ public class modelmapone{
      * @param m map yang ingin diset
      * @param i id map yang ingin diset
      */
-    public void setmap (SortedMap<String,Vector<String[]>> m, int i)
+    public void setmap (SortedMap<String,Vector<twostringarray>> m, int i)
     {
         if (m!=null)
         {
@@ -229,8 +223,9 @@ public class modelmapone{
                     String s1="";
                     String s2="";
                     String s3="";
-                    Vector<String[]> tempV = new Vector<String[]>();
-                    String[] stemp = new String[2];
+                    Vector<twostringarray> tempV = new Vector<twostringarray>();
+					Vector<twostringarray> tempV1 = new Vector<twostringarray>();
+                    twostringarray stemp = new twostringarray();
                     boolean cek = false;
                     boolean cekspecial = false;
                     int tempint;
@@ -247,27 +242,36 @@ public class modelmapone{
                                     cek = true;
                             else if (temp.compareTo(".")==0)
                             {
+//									tempV = (Vector<twostringarray>) tempV.clone();
+//									System.out.println(tempV);
+									// tempV.removeAllElements();
+									// tempV1.removeAllElements();
                                     cek = false;
                                     if (map[bhs1].get(s1)!=null)
                                     {
                                         tempV = map[bhs1].get(s1);
                                     }
-                                        stemp[0] = s2;
-                                        stemp[1] = s3;
+										stemp.setarti(s2);
+										stemp.settype(s3);										
                                         tempV.add(stemp);
                                         map[bhs1].put(s1,tempV);
+										tempV = new Vector<twostringarray>();
                                         tipe.put(s1,s3);
+//										System.out.println(map[bhs1].get(s1).get(0).getarti() + " " + map[bhs1].get(s1).get(0).gettype());
 //                                    }
-                                    tempV = new Vector<String[]>();
+//                                    tempV1 = (Vector<twostringarray>) tempV1.clone();
                                     if (map[bhs2].get(s2)!=null)
                                     {
-                                        tempV = map[bhs2].get(s2);
+                                        tempV1 = map[bhs2].get(s2);
                                     }
-                                        stemp[0] = s1;
-                                        tempV.add(stemp);
-                                        map[bhs2].put(s2,tempV);
+                                        stemp.setarti(s1);
+                                        tempV1.add(stemp);
+                                        map[bhs2].put(s2,tempV1);
+										tempV1 = new Vector<twostringarray>();
                                         tipe.put(s2,s3);
 //                                    }
+									if (map[bhs1].get("apel")!=null)
+										System.out.println(map[bhs1].get("apel").get(0).getarti());
                             }
                             else if (cek)
                                     s2 = s2+temp;
@@ -284,7 +288,7 @@ public class modelmapone{
             }
             catch (Exception e)
             {
-                    System.err.println("Error: "+e.getMessage());
+                    System.err.println("Error readinput: "+e.getMessage());
             }
     }
 
@@ -314,7 +318,7 @@ public class modelmapone{
             }
             catch (Exception e)
             {	//Catch exception if any
-                    System.err.println("Error: " + e.getMessage());
+                    System.err.println("Error writeoutput: " + e.getMessage());
             }
     }
 }

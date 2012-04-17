@@ -31,6 +31,8 @@ public class Tubes2OOP {
 
         BufferedReader brin = new BufferedReader(new InputStreamReader(System.in));
         Scanner in = new Scanner(System.in);
+		
+//		System.out.println(model.getterjemahan("Indonesia","apel").get(0).getarti());
 
         String bahasadef="Indonesia";
         String bahasadua="Inggris";
@@ -56,7 +58,7 @@ public class Tubes2OOP {
                                     a--;
                                     if (a!=0)
                                     {
-                                            if (s2.compareTo(model.getterjemahan(bahasadua,s1).get(0)[0])==0)
+                                            if (s2.compareTo(model.getterjemahan(bahasadua,s1).get(0).getarti())==0)
 											{
 												view.cetak("Kata sudah ada dalam database");
 											}
@@ -90,8 +92,8 @@ public class Tubes2OOP {
                                     view.printpetunjuk();
                                     view.cetak("Input Kata : ");
                                     String s = view.getline(brin);
-                                    String hasil = model.getterjemahan(bahasadef,s).get(0)[0];
-                                    String tipe = model.getterjemahan(bahasadef,s).get(0)[1];
+                                    String hasil = model.getterjemahan(bahasadef,s).get(0).getarti();
+                                    String tipe = model.getterjemahan(bahasadef,s).get(0).gettype();
                                     if (hasil.compareTo("")!=0)
                                     {
                                             view.cetak("Terjemahan Kata : ");
@@ -169,7 +171,7 @@ public class Tubes2OOP {
                                 }
                 }
         }while (i!=7);
-        model.writeoutput(bahasa[0],"DicIndonesiaEnglish.txt");
+        model.writeoutput(bahasa[0],"DicIndonesiaEnglis.txt");
         in.close();
     }
 }
