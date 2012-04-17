@@ -31,8 +31,6 @@ public class Tubes2OOP {
 
         BufferedReader brin = new BufferedReader(new InputStreamReader(System.in));
         Scanner in = new Scanner(System.in);
-		
-//		System.out.println(model.getterjemahan("Indonesia","apel").get(0).getarti());
 
         String bahasadef="Indonesia";
         String bahasadua="Inggris";
@@ -58,7 +56,7 @@ public class Tubes2OOP {
                                     a--;
                                     if (a!=0)
                                     {
-                                            if (s2.compareTo(model.getterjemahan(bahasadua,s1).get(0).getarti())==0)
+                                            if (s2.compareTo(model.getterjemahan(bahasadua,s1))==0)
 											{
 												view.cetak("Kata sudah ada dalam database");
 											}
@@ -92,8 +90,8 @@ public class Tubes2OOP {
                                     view.printpetunjuk();
                                     view.cetak("Input Kata : ");
                                     String s = view.getline(brin);
-                                    String hasil = model.getterjemahan(bahasadef,s).get(0).getarti();
-                                    String tipe = model.getterjemahan(bahasadef,s).get(0).gettype();
+                                    String hasil = model.getterjemahan(bahasadef,s);
+                                    String tipe = model.gettipe(s);
                                     if (hasil.compareTo("")!=0)
                                     {
                                             view.cetak("Terjemahan Kata : ");
