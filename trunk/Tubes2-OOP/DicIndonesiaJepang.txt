@@ -35,7 +35,7 @@ apik(adj):torimu.
 arsip(noun):koubunsho.
 arsitek(noun):kenchikuka.
 arus(noun):nagare.
-asap(noun):kemuri
+asap(noun):kemuri.
 aspal(noun):asufaruto.
 asuransi(noun):hoken.
 atap(noun):yane.
@@ -88,7 +88,7 @@ bilangan(noun):kazu.
 bintang(noun):hoshi.
 biola(noun):baiorin.
 bir(noun):biiru.
-biro(noun):kyoku
+biro(noun):kyoku.
 biru(adj):aoi.
 bodoh(adj):baka.
 bohong(verb):uso.
@@ -673,4 +673,3 @@ waktu(noun):jikan.
 wanita(noun):onna.
 warna(noun):iro.
 wortel(noun):ninjin.
-# //end of file

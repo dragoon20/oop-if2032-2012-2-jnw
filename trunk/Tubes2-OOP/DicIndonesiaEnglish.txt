@@ -60,7 +60,7 @@ banjir(noun):flood.
 bantal(noun):pillow.
 bara(noun):ember.
 barat(noun):west.
-baru(adj):new
+baru(adj):new.
 basah(adj):wet.
 basi(adj):stale.
 batas(noun):boundary.
@@ -698,4 +698,3 @@ waktu(noun):time.
 wanita(noun):woman.
 warna(noun):color.
 wortel(noun):carrot.
-# //end of file
