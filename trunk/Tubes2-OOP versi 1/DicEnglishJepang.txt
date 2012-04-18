@@ -96,6 +96,7 @@ clock(noun):tokei.
 close(adj):chikai
 clothes(noun):fuku.
 cloud(noun):kumo.
+club(noun):bu.
 coat(noun):reifuku.
 coconut(noun):yashi.
 cold(adj):samui.
@@ -211,6 +212,7 @@ four(noun):shi
 fox(noun):kitsune.
 free(adj):muryou.
 friend(noun):tomo.
+friend(noun):nakama.
 frog(noun):kaeru.
 from(other):kara.
 front(other):mae.
@@ -322,6 +324,7 @@ lizard(noun):tokage.
 long(adj):nagai.
 look(verb):miru.
 love(noun):ai.
+love(noun):koi.
 lover(noun):koibito.
 low(adj):hikui.
 lumber(noun):ki.
@@ -366,6 +369,7 @@ neighbor(noun):rinjin.
 nervous(adj):kinchousuru.
 night(noun):yoru.
 nine(noun):jyuu.
+noisy(adj):urusai.
 noon(noun):hiru.
 north(noun):kita.
 nose(noun):hana.
@@ -389,9 +393,10 @@ paper(noun):kami.
 party(noun):paatii.
 pass(verb):tooru.
 peace(noun):heiwa.
+peacock(noun):kujaku.
 pencil(noun):enpitsu.
 pepper(noun):koshuo.
-pepper(noun):tougarashi
+pepper(noun):tougarashi.
 perfect(adj):kanpeki.
 permission(noun):kyoka.
 person(noun):hito.
@@ -533,6 +538,7 @@ swan(noun):gachou.
 swear(noun):chikai.
 sweet(adj):amai.
 swim(verb):sui'ei.
+sword(noun):katana.
 table(noun):meja.
 tail(noun):shippo.
 taste(noun):aji.
@@ -608,6 +614,7 @@ wife(noun):tsuma.
 win(verb):katsu.
 wind(noun):kaze.
 window(noun):mado.
+wish(noun):negai.
 wolf(noun):ookami.
 woman(noun):onna.
 wood(noun):ki.
@@ -623,4 +630,3 @@ yellow(adj):kiiroi.
 yesterday(noun):kinou.
 you(noun):anata.
 zero(noun):rei.
-# //end of file
