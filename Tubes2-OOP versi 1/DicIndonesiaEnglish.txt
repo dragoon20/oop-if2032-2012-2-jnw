@@ -15,7 +15,9 @@ alir(verb):flow.
 alkohol(noun):alcohol.
 aman(adj):safe.
 anak(noun):child.
+anda(noun):you.
 aneh(adj):strange.
+aneh(adj):weird.
 anggar(noun):fencing.
 anggur(noun):grape.
 angin(noun):wind.
@@ -53,15 +55,20 @@ barat(noun):west.
 basah(adj):wet.
 batas(noun):boundary.
 batu(noun):rock.
+batu(noun):stone.
 bawang(noun):garlic.
+bawang(noun):onion.
 bayam(noun):spinach.
 bebek(noun):duck.
 beda(adj):different.
 benci(verb):hate.
 benda(noun):object.
+benda(noun):thing.
 bendera(noun):flag.
 berat(adj):heavy.
+berat(noun):weight.
 beri(verb):give.
+berisik(adj):noisy.
 bersih(adj):clean.
 beruang(noun):bear.
 besi(noun):iron.
@@ -94,6 +101,7 @@ celana(noun):pants.
 cemas(verb):worry.
 cemburu(adj):jealous.
 cepat(adj):fast.
+cepat(adj):quick.
 cerdas(adj):smart.
 cerita(noun):story.
 cermin(noun):mirror.
@@ -109,6 +117,7 @@ cuci(verb):wash.
 cukup(adj):enough.
 cumi(noun):squid.
 dada(noun):chest.
+dada(noun):breast.
 dadu(noun):dice.
 daging(noun):meat.
 dalam(other):inside.
@@ -117,6 +126,7 @@ dampak(noun):effect.
 danau(noun):lake.
 dansa(verb):dance.
 dapat(verb):get.
+dapat(other):can.
 darah(noun):blood.
 dari(other):from.
 datang(verb):come.
@@ -126,6 +136,7 @@ dekat(adj):close.
 delapan(noun):eight.
 demam(noun):fever.
 dengar(verb):hear.
+dengar(verb):listen.
 depan(adj):front.
 desa(noun):village.
 dewa(noun):god.
@@ -148,6 +159,7 @@ emas(noun):gold.
 ember(noun):bucket.
 empat(noun):four.
 enak(adj):delicious.
+enak(adj):tasty.
 enam(noun):six.
 es(noun):ice.
 esok(noun):tomorrow.
@@ -175,9 +187,10 @@ gerak(verb):move.
 gerbang(noun):gate.
 gergaji(noun):saw.
 getar(verb):vibrate.
-gigi(noun):teeth.
+gigi:(noun)teeth.
 gigit(verb):bite.
 gila(adj):crazy.
+gila(adj):mad.
 gitar(noun):guitar.
 gores(verb):scratch.
 gratis(adj):free.
@@ -191,6 +204,7 @@ gurita(noun):octopus.
 guru(noun):teacher.
 gurun(noun):desert.
 hadiah(noun):present.
+hadiah(noun):gift.
 hamil(adj):pregnant.
 hancur(verb):destroy.
 handuk(noun):towel.
@@ -198,6 +212,7 @@ hangat(adj):warm.
 hantu(noun):ghost.
 hapus(verb):erase.
 harap(verb):hope.
+harapan(noun):wish.
 harga(noun):price.
 hari(noun):day.
 harimau(noun):tiger.
@@ -215,6 +230,7 @@ hiu(noun):shark.
 hujan(noun):rain.
 huruf(noun):letter.
 hutan(noun):forest.
+hutan(noun):woods.
 iblis(noun):devil.
 ibu(noun):mother.
 ide(noun):idea.
@@ -234,6 +250,7 @@ istri(noun):wife.
 itu(noun):that.
 izin(noun):permission.
 jadi(other):so.
+jadi(verb):become.
 jadwal(noun):schedule.
 jaga(verb):guard.
 jagung(noun):corn.
@@ -264,6 +281,7 @@ kaca(noun):glass.
 kacang(noun):nut.
 kadal(noun):lizard.
 kado(noun):gift.
+kado(noun):present.
 kakek(noun):grandfather.
 kaki(noun):feet.
 kalau(other):if.
@@ -287,9 +305,11 @@ kawan(noun):friend.
 kawin(verb):marry.
 kaya(adj):rich.
 kayu(noun):wood.
+kayu(noun):lumber.
 kebun(noun):garden.
 kecap(noun):soysauce.
 kecil(adj):small.
+kecil(adj):little.
 keju(noun):cheese.
 kekasih(noun):lover.
 kelahi(verb):fight.
@@ -314,9 +334,11 @@ keras(adj):hard.
 kerbau(noun):buffalo.
 kereta(noun):train.
 kerja(verb):work.
+kerja(noun):job.
 kertas(noun):paper.
 khusus(adj):special.
 kirim(verb):send.
+klub(noun):club.
 kolam(noun):pool.
 komik(noun):comic.
 kosong(adj):empty.
@@ -357,6 +379,7 @@ lengkap(adj):complete.
 lewat(verb):pass.
 lidah(noun):tongue.
 lihat(verb):look.
+lihat(verb):see.
 lima(noun):five.
 lindung(verb):protect.
 lingkaran(noun):circle.
@@ -364,6 +387,7 @@ listrik(noun):electric.
 lompat(verb):jump.
 lubang(noun):hole.
 lucu(adj):cute.
+lucu(adj):funny.
 lumba-lumba(noun):dolphin.
 lutut(noun):knee.
 maaf(verb):sorry.
@@ -391,6 +415,7 @@ menang(verb):win.
 mengapa(other):why.
 mengerti(verb):understand.
 merah(adj):red.
+merak(noun):peacock.
 merpati(noun):pigeon.
 mesin(noun):machine.
 mimpi(noun):dream.
@@ -419,6 +444,7 @@ nol(noun):zero.
 nyanyi(verb):sing.
 nyawa(noun):life.
 obat(noun):medicine.
+obat(noun):drug.
 ombak(noun):wave.
 orang(noun):person.
 otak(noun):brain.
@@ -440,6 +466,7 @@ pasir(noun):sand.
 patung(noun):statue.
 payudara(noun):breast.
 payung(noun):umbrella.
+pedang(noun):sword.
 pelan(adj):slow.
 pelangi(noun):rainbow.
 peluk(verb):hug.
@@ -500,6 +527,7 @@ romantis(adj):romantic.
 roti(noun):bread.
 rubah(noun):fox.
 rumah(noun):house.
+rumah(noun):home.
 rumput(noun):grass.
 rusa(noun):deer.
 sabtu(noun):saturday.
@@ -507,6 +535,7 @@ sabuk(noun):belt.
 sabun(noun):soap.
 sahabat(noun):friend.
 sakit(adj):sick.
+sakit(verb):hurt.
 salah(adj):wrong.
 salju(noun):snow.
 sama(adj):same.
@@ -553,6 +582,7 @@ siswa(noun):student.
 stasiun(noun):station.
 suami(noun):husband.
 suara(noun):sound.
+suara(noun):voice.
 suhu(noun):temperature.
 suka(verb):like.
 sumpah(noun):swear.
@@ -565,6 +595,7 @@ tahun(noun):year.
 takdir(noun):destiny.
 takut(verb):fear.
 tali(noun):string.
+tali(noun):rope.
 taman(noun):garden.
 tamat(verb):finish.
 tambang(noun):mine.
@@ -592,9 +623,12 @@ tembok(noun):wall.
 tempat(noun):place.
 temu(verb):meet.
 tenaga(noun):power.
+tenaga(noun):energy.
 tenang(adj):calm.
 tenar(adj):popular.
+tenar(adj):famous.
 tengah(noun):middle.
+tengah(noun):center.
 tepung(noun):flour.
 terang(adj):bright.
 terbang(verb):fly.
@@ -604,6 +638,7 @@ tiba(verb):arrive.
 tidur(verb):sleep.
 tiga(noun):three.
 tikus(noun):rat.
+tikus(noun):mouse.
 timur(noun):east.
 tinggi(adj):high.
 toko(noun):store.

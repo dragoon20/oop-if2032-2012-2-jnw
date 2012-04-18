@@ -15,6 +15,7 @@ alir(verb):flow.
 alkohol(noun):alcohol.
 aman(adj):safe.
 anak(noun):child.
+anda(noun):you.
 aneh(adj):strange.
 aneh(adj):weird.
 anggar(noun):fencing.
@@ -67,6 +68,7 @@ bendera(noun):flag.
 berat(adj):heavy.
 berat(noun):weight.
 beri(verb):give.
+berisik(adj):noisy.
 bersih(adj):clean.
 beruang(noun):bear.
 besi(noun):iron.
@@ -210,6 +212,7 @@ hangat(adj):warm.
 hantu(noun):ghost.
 hapus(verb):erase.
 harap(verb):hope.
+harapan(noun):wish.
 harga(noun):price.
 hari(noun):day.
 harimau(noun):tiger.
@@ -335,6 +338,7 @@ kerja(noun):job.
 kertas(noun):paper.
 khusus(adj):special.
 kirim(verb):send.
+klub(noun):club.
 kolam(noun):pool.
 komik(noun):comic.
 kosong(adj):empty.
@@ -411,6 +415,7 @@ menang(verb):win.
 mengapa(other):why.
 mengerti(verb):understand.
 merah(adj):red.
+merak(noun):peacock.
 merpati(noun):pigeon.
 mesin(noun):machine.
 mimpi(noun):dream.
@@ -461,6 +466,7 @@ pasir(noun):sand.
 patung(noun):statue.
 payudara(noun):breast.
 payung(noun):umbrella.
+pedang(noun):sword.
 pelan(adj):slow.
 pelangi(noun):rainbow.
 peluk(verb):hug.
@@ -664,4 +670,3 @@ waktu(noun):time.
 wanita(noun):woman.
 warna(noun):color.
 wortel(noun):carrot.
-# //end of file

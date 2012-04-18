@@ -16,6 +16,7 @@ alir(verb):nagareru.
 alkohol(noun):arukoru.
 aman(adj):heiwa.
 anak(noun):kodomo.
+anda(noun):anata.
 aneh(adj):okashii.
 anggar(noun):kenbu.
 anggur(noun):budou.
@@ -64,6 +65,7 @@ bendera(noun):hata.
 berat(adj):omoi.
 berat(noun):omosa.
 beri(verb):ageru.
+berisik(adj):urusai.
 bersih(adj):seiketsu.
 beruang(noun):kuma.
 besi(noun):tetsu.
@@ -103,6 +105,7 @@ cermin(noun):kagami.
 cewek(noun):shoujyo.
 cincin(noun):yubiwa.
 cinta(noun):ai.
+cinta(noun):koi.
 cium(verb):kisu.
 coba(verb):tamesu.
 cokelat(noun):chokoreeto.
@@ -203,6 +206,7 @@ hangat(adj):atatakai.
 hantu(noun):yure.
 hapus(verb):kieru.
 harap(verb):nozomu.
+harapan(noun):negai.
 harga(noun):kakaku.
 hari(noun):hi.
 harimau(noun):tora.
@@ -324,6 +328,7 @@ kerja(noun):shigoto.
 kertas(noun):kami.
 khusus(adj):tokubetsu.
 kirim(verb):okuru.
+klub(noun):bu.
 kolam(noun):ike.
 komik(noun):manga.
 kosong(adj):munashii.
@@ -400,6 +405,7 @@ mengapa(other):naze.
 mengapa(other):doushite.
 mengerti(verb):wakaru.
 merah(adj):akai.
+merak(noun):kujaku.
 merpati(noun):hato.
 mesin(noun):kikai.
 mimpi(noun):yume.
@@ -449,6 +455,7 @@ pasir(noun):suna.
 patung(noun):zou.
 payudara(noun):mune.
 payung(noun):kasa.
+pedang(noun):katana.
 pelan(adj):osoi.
 pelangi(noun):niji.
 peluk(verb):kakaeru.
@@ -515,6 +522,7 @@ sabtu(noun):doyoubi.
 sabuk(noun):obi.
 sabun(noun):sekken.
 sahabat(noun):tomo.
+sahabat(noun):nakama.
 sakit(adj):byouki.
 sakit(verb):itai.
 salah(adj):machigai.
@@ -645,4 +653,3 @@ waktu(noun):jikan.
 wanita(noun):onna.
 warna(noun):iro.
 wortel(noun):ninjin.
-# //end of file
