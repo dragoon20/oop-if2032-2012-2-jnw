@@ -108,7 +108,7 @@ clean(adj):seiketsu.
 clear(adj):meiryou.
 climb(verb):noboru.
 clock(noun):tokei.
-close(adj):chikai
+close(adj):chikai.
 clothes(noun):fuku.
 cloud(noun):kumo.
 coat(noun):reifuku.
@@ -227,7 +227,7 @@ fly(verb):tobu.
 foam(noun):awa.
 forbidden(adj):higoho.
 forest(noun):mori.
-four(noun):shi
+four(noun):shi.
 fox(noun):kitsune.
 free(adj):muryou.
 friend(noun):tomo.
@@ -252,7 +252,7 @@ glue(noun):nori.
 go(verb):iku.
 goat(noun):yagi.
 god(noun):kami.
-gold(noun):kin
+gold(noun):kin.
 grape(noun):budou.
 grandfather(noun):sofu.
 grandmother(noun):sobo.
@@ -302,7 +302,7 @@ important(adj):taisetsu.
 industry(noun):kougyou.
 injury(noun):kega.
 insect(noun):mushi.
-inside(other):naka
+inside(other):naka.
 insurance(noun):hoken.
 interesting(adj):kyomibukai.
 invite(verb):sasou.
@@ -416,7 +416,7 @@ pass(verb):tooru.
 peace(noun):heiwa.
 pencil(noun):enpitsu.
 pepper(noun):koshuo.
-pepper(noun):tougarashi
+pepper(noun):tougarashi.
 perfect(adj):kanpeki.
 permission(noun):kyoka.
 person(noun):hito.
@@ -519,7 +519,7 @@ slow(adj):osoi.
 small(adj):chiisai.
 smart(adj):rikou.
 smile(verb):hohoemu.
-smoke(noun):kemuri
+smoke(noun):kemuri.
 snail(noun):katatsumuri.
 snake(noun):hebi.
 snow(noun):yuki.
@@ -656,4 +656,3 @@ yellow(adj):kiiroi.
 yesterday(noun):kinou.
 you(noun):anata.
 zero(noun):rei.
-# //end of file
